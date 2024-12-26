@@ -2,7 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #5c5858;
+  border-radius: 10px;
   padding: 10px;
- margin: 20px 0;
+  margin: 20px 0;
+}
+
+.btnDelete {
+  margin-top: 10px;
 }

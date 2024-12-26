@@ -1,16 +1,24 @@
-import React from 'react';
+import React from "react";
 import "./Task.css";
 
 interface Props {
   task: string;
   onDeleteTask: React.MouseEventHandler;
+  onToggleTask: React.MouseEventHandler;
 }
 
-const Task: React.FC<Props> = ({task, onDeleteTask}) => {
+const Task: React.FC<Props> = ({ task, onToggleTask, onDeleteTask }) => {
   return (
     <div className="task">
       <p>{task}</p>
-      <button onClick={onDeleteTask}>Delete</button>
+      <div>
+        <label>Accomplished</label>
+        <input type="checkbox" onClick={onToggleTask}></input>
+        <br />
+        <button className="btnDelete" onClick={onDeleteTask}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 };
